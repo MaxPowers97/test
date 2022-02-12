@@ -7,74 +7,67 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 </head>
 
 <body>
 	<div class="wrapper">
-		<div class="content">
-			<div class="modal">
-				<div class="modal__img">
-					<div class="modal__img-close"></div>
-					<img src="" alt="modal__img">
-					<div class="modal__img-num">1</div>
+		<header class="header">
+			<div class="container">
+				<div class="header__body">
+					<div class="header__img">
+						<img src="https://source.unsplash.com/user/simonppt/" alt="logo-header">
+					</div>
+					<div class="header__blocks">
+						<div class="header__short-block dark-gray"></div>
+						<div class="header__long-block dark-gray"></div>
+					</div>
 				</div>
 			</div>
-			<header class="header">
-				<div class="container">
-					<div class="header__body">
-						<div class="header__img">
-							<img src="img/logo-header.png" alt="logo-header">
+		</header>
+		<main class="main">
+			<div class="container">
+				<div class="main__body">
+					<div class="main__aside">
+						<div class="main__aside-top dark-gray"></div>
+						<div class="main__aside-bottom">
+							<img src="https://source.unsplash.com/user/byrdman85/" alt="aside_img">
 						</div>
-						<div class="header__blocks">
-							<div class="header__short-block dark-gray"></div>
-							<div class="header__long-block dark-gray"></div>
+					</div>
+					<div class="main__base">
+						<div class="main__base-top light-gray"></div>
+						<div class="main__base-pics">
+							<div class="main__base-pics-img">
+								<img src="https://source.unsplash.com/user/matreding/" alt="img-1">
+							</div>
+							<div class="main__base-pics-img">
+								<img src="https://source.unsplash.com/user/philipmyr/" alt="img-2">
+							</div>
+							<div class="main__base-pics-img">
+								<img src="https://source.unsplash.com/user/purzlbaum/" alt="img-3">
+							</div>
+							<div class="main__base-pics-img">
+								<img src="https://source.unsplash.com/user/lois184/" alt="img-4">
+							</div>
+							<div class="main__base-pics-img">
+								<img src="https://source.unsplash.com/user/dynamicwang/" alt="img-5">
+							</div>
+							<div class="main__base-pics-img">
+								<img src="https://source.unsplash.com/user/vardarious/" alt="img-6">
+							</div>
+							<div class="main__base-pics-img">
+								<img src="https://source.unsplash.com/user/kevin_w_/" alt="img-7">
+							</div>
+						</div>
+						<div class="main__base-bottom">
+							<div class="main__base-bottom-left light-gray"></div>
+							<div class="main__base-bottom-right light-gray"></div>
 						</div>
 					</div>
 				</div>
-			</header>
-			<main class="main">
-				<div class="container">
-					<div class="main__body">
-						<div class="main__aside">
-							<div class="main__aside-top dark-gray"></div>
-							<div class="main__aside-bottom">
-								<img src="img/aside_img.jpg" alt="aside_img">
-							</div>
-						</div>
-						<div class="main__base">
-							<div class="main__base-top light-gray"></div>
-							<div class="main__base-pics">
-								<div class="main__base-pics-img">
-									<img src="img/img_1.jpg" alt="img-1">
-								</div>
-								<div class="main__base-pics-img">
-									<img src="img/img_2.jpeg" alt="img-2">
-								</div>
-								<div class="main__base-pics-img">
-									<img src="img/img_3.jpg" alt="img-3">
-								</div>
-								<div class="main__base-pics-img">
-									<img src="img/img_4.jpg" alt="img-4">
-								</div>
-								<div class="main__base-pics-img">
-									<img src="img/img_5.jpg" alt="img-5">
-								</div>
-								<div class="main__base-pics-img">
-									<img src="img/img_6.jpg" alt="img-6">
-								</div>
-								<div class="main__base-pics-img">
-									<img src="img/img_7.jpg" alt="img-7">
-								</div>
-							</div>
-							<div class="main__base-bottom">
-								<div class="main__base-bottom-left light-gray"></div>
-								<div class="main__base-bottom-right light-gray"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</main>
-		</div>
+			</div>
+		</main>
 		<footer class="footer">
 			<div class="container">
 				<div class="footer__body">
@@ -87,7 +80,42 @@
 				</div>
 			</div>
 		</footer>
+
+		<!-- структура слайдера, создаваемого скриптом
+		<div class="modal">
+			<div class="swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="" alt="img-1">
+					</div>
+					<div class="swiper-slide">
+						<img src="" alt="img-2">
+					</div>
+					<div class="swiper-slide">
+						<img src="" alt="img-3">
+					</div>
+					<div class="swiper-slide">
+						<img src="" alt="img-4">
+					</div>
+					<div class="swiper-slide">
+						<img src="" alt="img-5">
+					</div>
+					<div class="swiper-slide">
+						<img src="" alt="img-6">
+					</div>
+					<div class="swiper-slide">
+						<img src="" alt="img-7">
+					</div>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div> -->
+
 	</div>
+	</div>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 

@@ -76,10 +76,6 @@ body.lock {
   .wrapper {
     margin: 12px 20px; } }
 
-.container {
-  width: 100%;
-  margin: 0px auto; }
-
 .content {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
@@ -90,83 +86,6 @@ body.lock {
 
 .light-gray {
   background-color: #dcdcdc; }
-
-.modal {
-  display: none;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: 2; }
-  .modal .modal__img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-    .modal .modal__img .modal__img-close {
-      -ms-flex-item-align: end;
-      align-self: flex-end;
-      width: 50px;
-      height: 50px;
-      -webkit-transform: translate(50px, 0px);
-      -ms-transform: translate(50px, 0px);
-      transform: translate(50px, 0px);
-      cursor: pointer; }
-    .modal .modal__img .modal__img-close::before {
-      content: "";
-      position: absolute;
-      height: 2px;
-      background-color: #dcdcdc;
-      width: 50px;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg); }
-    .modal .modal__img .modal__img-close::after {
-      content: "";
-      position: absolute;
-      height: 2px;
-      background-color: #dcdcdc;
-      width: 50px;
-      -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg); }
-    .modal .modal__img .modal__img-num {
-      color: #dcdcdc;
-      font-size: 50px;
-      text-align: center;
-      margin: 20px auto 0px auto; }
-  .modal .modal__img img {
-    max-width: 500px; }
-
-.modal.active {
-  display: block; }
-
-@media (max-width: 767px) {
-  .modal .modal__img .modal__img-close {
-    width: calc(30px + (50 - 30) * ((100vw - 240px) / (767 - 240)));
-    height: calc(30px + (50 - 30) * ((100vw - 240px) / (767 - 240)));
-    -webkit-transform: translate(calc(30px + (50 - 30) * ((100vw - 240px) / (767 - 240))), 0px);
-    -ms-transform: translate(calc(30px + (50 - 30) * ((100vw - 240px) / (767 - 240))), 0px);
-    transform: translate(calc(30px + (50 - 30) * ((100vw - 240px) / (767 - 240))), 0px); }
-  .modal .modal__img .modal__img-close::before,
-  .modal .modal__img .modal__img-close::after {
-    width: calc(30px + (50 - 30) * ((100vw - 240px) / (767 - 240))); }
-  .modal .modal__img .modal__img-num {
-    font-size: calc(30px + (50 - 30) * ((100vw - 240px) / (767 - 240))); }
-  .modal .modal__img img {
-    max-width: calc(150px + (500 - 150) * ((100vw - 240px) / (767 - 240))); } }
 
 .header .header__body {
   display: -webkit-box;
@@ -266,7 +185,9 @@ body.lock {
     bottom: 0; }
   .main .main__aside .main__aside-bottom img {
     width: 100%;
-    height: 134px; }
+    height: 134px;
+    -o-object-fit: cover;
+    object-fit: cover; }
 
 .main .main__base {
   width: 757px; }
@@ -282,12 +203,16 @@ body.lock {
     flex-wrap: wrap; }
     .main .main__base .main__base-pics .main__base-pics-img {
       margin: 0 22.5px 21px 0;
-      cursor: pointer; }
+      cursor: pointer;
+      height: 152px;
+      width: 133px; }
     .main .main__base .main__base-pics .main__base-pics-img:nth-child(5n) {
       margin: 0 0 21px 0; }
     .main .main__base .main__base-pics .main__base-pics-img img {
-      height: 152px;
-      width: 133px; }
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover; }
   .main .main__base .main__base-bottom {
     width: 100%;
     height: 210px;
@@ -440,7 +365,7 @@ body.lock {
   flex-direction: column; }
 
 .img {
-  background: url("../img/footer.jpg") no-repeat center; }
+  background: url("https://source.unsplash.com/user/druks/") no-repeat center; }
 
 @media (max-width: 767px) {
   .footer .footer__body {
@@ -460,3 +385,50 @@ body.lock {
       -ms-flex: 50%;
       flex: 50%;
       margin: 0 0 calc(5px + (28 - 5) * ((100vw - 240px) / (767 - 240))) 0; } }
+
+.modal {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2; }
+  .modal .swiper {
+    width: 100%;
+    height: 100%; }
+    .modal .swiper .swiper-slide {
+      text-align: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .modal .swiper .swiper-slide img {
+      display: block;
+      width: 500px;
+      height: auto;
+      -o-object-fit: cover;
+      object-fit: cover; }
+    .modal .swiper .swiper-pagination {
+      font-size: 20px;
+      color: #ffffff; }
+    .modal .swiper .close-button {
+      position: fixed;
+      top: 5%;
+      left: 86%;
+      font-size: 60px;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      color: #ffffff;
+      z-index: 5; }
+
+@media (max-width: 767px) {
+  .swiper-slide img {
+    width: calc(150px + (500 - 150) * ((100vw - 240px) / (767 - 240))); } }
